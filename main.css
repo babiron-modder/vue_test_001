@@ -1,0 +1,98 @@
+
+body{
+    margin: 0px;
+    font-family: Meiryo;
+}
+header{
+    background-color: #242424;
+    display: flex;
+    margin: 0px;
+    padding: 0px 5px;
+}
+footer{
+    background-color: #242424;
+    display: flex;
+    margin: 0px;
+    padding: 0px 5px;
+}
+nav{
+    /* background-color: #aaaaaa; */
+    border-right: solid 1px;
+    width: 250px;
+    font-size: 14px;
+}
+main{
+    /* background-color: #e1ffd3; */
+    padding: 5px;
+}
+h1{
+    margin: 0;
+}
+h2{
+    margin: 0;
+}
+h3{
+    margin: 0;
+}
+h4{
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+ul{
+    margin: 0px;
+    padding: 0px 20px;
+}
+li>a{
+    overflow-wrap: anywhere;
+}
+li::marker{
+    content: "・";
+}
+.link-card{
+    /* background-color: #eeeeee;
+    border:solid 1px; */
+    padding:3px;
+    margin:5px 2px;
+}
+.link-card button{
+    height: 22px;
+    border: solid 1px;
+    /* color: #eeeeee; */
+    background-color: #dedede;
+    margin-right: -2px;
+}
+.link-card button:hover{
+    background-color: #a7dcec;
+}
+.link-card button:active{
+    background-color: #66bdd8;
+} 
+.link-card input{
+    height: 18px;
+    border: solid 1px;
+}
+#mordal-window{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: #eeeeee;
+    border: solid 1px;
+    border-radius: 4px;
+    width: 200px;
+    height: 40px;
+    bottom: 50px;
+    left: calc(50% - 100px);
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}

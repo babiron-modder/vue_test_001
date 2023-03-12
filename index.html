@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Wiki</title>
+</head>
+<body>
+    <div id="app">
+        <mordal-window :show_state="mordal_show"></mordal-window>
+        <header-bar></header-bar>
+        <div style="display: flex;min-height: calc(100vh - 64px);">
+            <nav-area></nav-area>
+            <main style="flex: 1;">
+                <section>
+                    <h3>ファイル</h3>
+                    <link-card url="hoge\miso.xlsx" description="色々使えて便利なエクセル。よく使う" @mordal="showMordal">例のエクセル</link-card>
+                    <link-card url="hoge\miso.xlsx" description="test" @mordal="showMordal">hoge</link-card>
+                    <link-card url="hoge\miso.xlsx" description="test" @mordal="showMordal">hoge</link-card>
+                    <link-card url="hoge\miso.xlsx" description="test" @mordal="showMordal">hoge</link-card>
+                    <link-card url="hoge\miso.xlsx" description="test" @mordal="showMordal">hoge</link-card>
+                    <link-card url="hoge\miso.xlsx" description="test" @mordal="showMordal">hoge</link-card>
+                </section>
+            </main>
+        </div>
+        
+        <footer-bar></footer-bar>
+    </div>
+    <script src="vue.min.js"></script>
+    <script src="main.js?ver=1.0.0"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                mordal_show: false
+            },
+            methods: {
+                showMordal: function(){
+                    this.mordal_show = true;
+                    setTimeout(()=>{
+                        this.mordal_show = false;
+                    }, 1250);
+                }
+            }
+        })
+    </script>
+</body>
+</html>
